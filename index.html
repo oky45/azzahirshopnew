@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting - Az Zahir Shop</title>
+  <title>Az Zahir Shop - Katalog Gas, Galon, ATK & Layanan Mbiz Online</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif, -apple-system, BlinkMacSystemFont;
       background-color: #0b0f19;
@@ -13,23 +20,36 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
       text-align: center;
       padding: 1.5rem;
     }
     .card {
       background: rgba(21, 27, 38, 0.85);
+      backdrop-filter: blur(12px);
       border: 1px solid rgba(0, 255, 170, 0.3);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      max-width: 440px;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 480px;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 170, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 255, 170, 0.15);
+    }
+    .logo-badge {
+      display: inline-block;
+      background: rgba(0, 255, 170, 0.1);
+      color: #00ffaa;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(0, 255, 170, 0.2);
     }
     .spinner {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border: 4px solid rgba(0, 255, 170, 0.2);
       border-top-color: #00ffaa;
       border-radius: 50%;
@@ -40,47 +60,68 @@
       to { transform: rotate(360deg); }
     }
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: #f8fafc;
+    }
+    h1 span {
       color: #00ffaa;
     }
     p {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: #94a3b8;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
+      margin-bottom: 2rem;
+      line-height: 1.6;
     }
     .btn {
-      display: inline-block;
+      display: block;
+      width: 100%;
       background: #00ffaa;
       color: #05140f;
       font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 10px;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 12px;
       text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(0, 255, 170, 0.3);
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 255, 170, 0.3);
     }
     .btn:hover {
       transform: translateY(-2px);
-      filter: brightness(1.08);
+      filter: brightness(1.1);
+      box-shadow: 0 6px 20px rgba(0, 255, 170, 0.4);
+    }
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #64748b;
     }
   </style>
   <script>
-    // Pengalihan otomatis instan ke URL Web App Apps Script
-    window.location.replace("https://script.google.com/macros/s/AKfycbyuwt7xcuE6A8ClOjLhHctzhcUubFZZR3rhwKMFoMCBNeaFpl1BVWPIT6S04EPJr7DuUA/exec");
+    // URL Web App Google Apps Script Utama
+    var targetUrl = "https://script.google.com/macros/s/AKfycbyuwt7xcuE6A8ClOjLhHctzhcUubFZZR3rhwKMFoMCBNeaFpl1BVWPIT6S04EPJr7DuUA/exec";
+    
+    // Pengalihan otomatis instan setelah halaman dimuat
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        window.location.replace(targetUrl);
+      }, 400);
+    });
   </script>
 </head>
 <body>
   <div class="card">
+    <div class="logo-badge">Az Zahir Shop Engine</div>
     <div class="spinner"></div>
-    <h1>Mengarahkan ke Az Zahir Shop...</h1>
-    <p>Anda sedang dialihkan ke sistem katalog online dan manajemen pesanan resmi Toko Az Zahir Shop.</p>
+    <h1>Mengarahkan ke <span>Katalog Resmi</span></h1>
+    <p>Anda sedang dialihkan secara otomatis ke sistem katalog online, pemesanan gas, galon, ATK, serta pengadaan Mbiz Toko Az Zahir Shop.</p>
     <a href="https://script.google.com/macros/s/AKfycbyuwt7xcuE6A8ClOjLhHctzhcUubFZZR3rhwKMFoMCBNeaFpl1BVWPIT6S04EPJr7DuUA/exec" class="btn">
-      Klik Disini Jika Tidak Otomatis
+      Buka Katalog Sekarang
     </a>
+    <div class="footer-note">
+      &copy; 2026 Zettbos Technologies &bull; All Rights Reserved
+    </div>
   </div>
 </body>
 </html>
